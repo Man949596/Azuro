@@ -1,0 +1,252 @@
+.proposal-page {
+  min-height: calc(100vh - 93px);
+  padding: clamp(30px, 5vw, 58px) 20px 70px;
+  background: #f5f7ff;
+}
+
+.proposal-content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proposal-back {
+  display: block;
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1769e8;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.proposal-back:hover {
+  transform: translateX(-3px);
+  color: #0e56c5;
+}
+
+.proposal-back span {
+  margin-right: 5px;
+  transition: transform .2s ease;
+}
+
+.proposal-back:hover span {
+  transform: translateX(-3px);
+}
+
+.proposal-eyebrow {
+  margin: 0 0 9px;
+  color: #1769e8;
+  font-size: 15px;
+}
+
+.proposal-content h1 {
+  margin: 0;
+  color: #141d3b;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: clamp(36px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 1.2;
+}
+
+.proposal-intro {
+  margin: 14px 0 34px;
+  color: #59647e;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.proposal-intro a,
+.proposal-confirmation a {
+  color: #0870df;
+  font-weight: 700;
+}
+
+.proposal-form {
+  padding: 38px;
+  border: 7px solid #fff;
+  border-radius: 12px;
+  background: #f5f7ff;
+  box-shadow: 0 2px 8px rgb(21 34 68 / 12%);
+  text-align: left;
+  animation: proposal-form-enter .5s ease both;
+}
+
+@keyframes proposal-form-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.proposal-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 8px;
+}
+
+.proposal-form label {
+  display: block;
+  min-width: 0;
+  color: #1c2948;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.proposal-form label > span {
+  color: #ed3030;
+}
+
+.proposal-form input:not([type='file']),
+.proposal-form select,
+.proposal-form textarea,
+.proposal-file {
+  width: 100%;
+  min-height: 44px;
+  display: block;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid #e1e4eb;
+  border-radius: 5px;
+  background: #fff;
+  color: #263350;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.proposal-form input:focus-visible,
+.proposal-form select:focus-visible,
+.proposal-form textarea:focus-visible {
+  border-color: #78a8ff;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgb(120 168 255 / 18%);
+  outline: none;
+}
+
+.proposal-form input::placeholder,
+.proposal-form textarea::placeholder {
+  color: #80899e;
+  opacity: 1;
+}
+
+.proposal-form select {
+  cursor: pointer;
+}
+
+.proposal-form textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.proposal-field {
+  margin-top: 12px;
+}
+
+.proposal-form .proposal-file {
+  min-height: 40px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.proposal-file::file-selector-button {
+  margin-right: 8px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 18px;
+  background: #1473e6;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.proposal-file::file-selector-button:hover {
+  transform: translateY(-1px);
+  background: #0e5fc8;
+}
+
+.proposal-submit {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 22px;
+  background: #1473e6;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.proposal-submit:hover {
+  transform: translateY(-2px);
+  background: #0e5fc8;
+  box-shadow: 0 8px 18px rgb(20 115 230 / 22%);
+}
+
+.proposal-submit span {
+  transition: transform .2s ease;
+}
+
+.proposal-submit:hover span {
+  transform: translateX(3px);
+}
+
+.proposal-confirmation {
+  margin: 18px 0 0;
+  color: #263350;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 520px) {
+  .proposal-content {
+    width: 100%;
+  }
+
+  .proposal-page {
+    padding: 28px 16px 48px;
+  }
+
+  .proposal-back {
+    margin-bottom: 24px;
+  }
+
+  .proposal-intro {
+    margin-bottom: 25px;
+  }
+
+  .proposal-form {
+    padding: 24px 18px;
+    border-width: 5px;
+  }
+
+  .proposal-fields {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .proposal-form label {
+    font-size: 14px;
+  }
+
+  .proposal-form input:not([type='file']),
+  .proposal-form select,
+  .proposal-form textarea,
+  .proposal-file {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .proposal-form textarea {
+    min-height: 88px;
+  }
+}
