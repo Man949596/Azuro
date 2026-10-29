@@ -1,11 +1,11 @@
 .portfolio-page {
   min-height: calc(100vh - 93px);
-  padding: clamp(32px, 5vw, 52px) 24px 72px;
+  padding: 70px 24px 72px;
   background: var(--page);
 }
 
 .portfolio-content {
-  width: min(100%, 1300px);
+  width: min(100%, 1230px);
   margin: 0 auto;
 }
 
@@ -18,27 +18,28 @@
 }
 
 .portfolio-eyebrow {
-  margin: 0 0 20px;
+  margin: 0 0 35px;
   color: var(--blue);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.3;
 }
 
 .portfolio-heading h1 {
   margin: 0;
   color: #141d3b;
-  font-size: clamp(29px, 4vw, 46px);
+  font-size: clamp(36px, 3.82vw, 52px);
   font-weight: 700;
   letter-spacing: -.05em;
-  line-height: 1.16;
+  line-height: 1.22;
 }
 
 .portfolio-ratings {
   display: flex;
   flex: 0 0 auto;
-  align-items: center;
-  gap: 18px;
-  padding-bottom: 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+  padding-bottom: 3px;
 }
 
 .portfolio-rating--clutch {
@@ -51,26 +52,26 @@
 .portfolio-rating__top {
   grid-column: 1 / -1;
   color: #667187;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .portfolio-rating__top b {
-  margin-left: 4px;
+  margin-left: 20px;
   color: #ed3028;
-  font-size: 15px;
-  letter-spacing: -1px;
+  font-size: 19px;
+  letter-spacing: -1.5px;
 }
 
 .portfolio-rating--clutch strong {
   color: #26394a;
-  font-size: 19px;
+  font-size: 29px;
   letter-spacing: -.06em;
   line-height: 1;
 }
 
 .portfolio-rating--clutch small {
   color: #667187;
-  font-size: 8px;
+  font-size: 14px;
   white-space: nowrap;
 }
 
@@ -81,12 +82,10 @@
 }
 
 .portfolio-rating__google-g {
-  background: conic-gradient(from -45deg, #4285f4 0 25%, #34a853 25% 48%, #fbbc05 48% 70%, #ea4335 70% 86%, #4285f4 86%);
-  background-clip: text;
-  font-family: Arial, sans-serif;
-  font-size: 31px;
-  font-weight: 700;
-  -webkit-text-fill-color: transparent;
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .portfolio-rating--google > span:last-child {
@@ -96,19 +95,19 @@
 
 .portfolio-rating--google b {
   color: #f04b20;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .portfolio-rating--google strong {
-  font-size: 14px;
-  letter-spacing: -1px;
+  font-size: 20px;
+  letter-spacing: -1.5px;
 }
 
 .portfolio-rating--google small {
   color: #667187;
-  font-size: 8px;
+  font-size: 13px;
   white-space: nowrap;
 }
 
@@ -217,7 +216,7 @@
   margin-bottom: 26px;
   color: #9298a5;
   stroke: currentColor;
-  stroke-width: 1.2;
+  stroke-width: 1.2; 
 }
 
 .portfolio-quote blockquote {
@@ -258,7 +257,7 @@
 
 @media (max-width: 760px) {
   .portfolio-page {
-    padding: 30px 16px 54px;
+    padding: 40px 16px 54px;
   }
 
   .portfolio-heading {
@@ -269,11 +268,11 @@
   }
 
   .portfolio-eyebrow {
-    margin-bottom: 13px;
+    margin-bottom: 18px;
   }
 
   .portfolio-heading h1 {
-    font-size: clamp(27px, 7vw, 38px);
+    font-size: clamp(27px, 7vw, 42px);
   }
 
   .portfolio-project {

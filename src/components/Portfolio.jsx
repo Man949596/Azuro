@@ -9,15 +9,19 @@ function Ratings() {
       <div className="portfolio-rating portfolio-rating--clutch">
         <span className="portfolio-rating__top">RATED 4.9/5 <b>★★★★★</b></span>
         <strong>Clutch</strong>
-        <small>79 REVIEWS</small>
+        <small>79 REVIEWS </small>
       </div>
       <div className="portfolio-rating portfolio-rating--google">
-        <span className="portfolio-rating__google-g" aria-hidden="true">G</span>
+        <img
+          className="portfolio-rating__google-g"
+          src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png"
+          alt="Google"
+        />
         <span><b>4.9/5 <strong>★★★★★</strong></b><small>Based on 60+ Reviews</small></span>
       </div>
     </aside>
   )
-} 
+}
 function SchoolSeal() {
   return (
     <svg className="portfolio-quote__seal" viewBox="0 0 48 48" fill="none" aria-hidden="true">
@@ -43,7 +47,7 @@ function Portfolio() {
         </div>
 
         <article className="portfolio-project" aria-labelledby="portfolio-project-title">
-          <a 
+          <a
             className="portfolio-project__preview"
             href={`https://${featuredProject.site}`}
             target="_blank"
@@ -73,48 +77,8 @@ function Portfolio() {
             <span className="portfolio-quote__role">{featuredProject.role}</span>
           </figcaption>
         </figure>
-         <article className="portfolio-project" aria-labelledby="portfolio-project-title">
-          <a
-            className="portfolio-project__preview"
-            href={`https://${featuredProject.site}`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Visit the Turnbull School website"
-          >
-            <img src={featuredProject.image} alt="Turnbull School website design" />
-          </a>
-          <div className="portfolio-project__details">
-            <a className="portfolio-project__site" href={`https://${featuredProject.site}`} target="_blank" rel="noreferrer">
-              {featuredProject.site} <span aria-hidden="true">↗</span>
-            </a>
-            <h2 id="portfolio-project-title">Turnbull School</h2>
-            <p>A modern, warm and inviting website created for Turnbull – a private elementary school in Ottawa.</p>
-            <a className="portfolio-project__button" href={`https://${featuredProject.site}`} target="_blank" rel="noreferrer">
-              Visit Site <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-         <article className="portfolio-project" aria-labelledby="portfolio-project-title">
-          <a
-            className="portfolio-project__preview"
-            href={`https://${featuredProject.site}`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Visit the Turnbull School website"
-          >
-            <img src={featuredProject.image} alt="Turnbull School website design" />
-          </a>
-          <div className="portfolio-project__details">
-            <a className="portfolio-project__site" href={`https://${featuredProject.site}`} target="_blank" rel="noreferrer">
-              {featuredProject.site} <span aria-hidden="true">↗</span>
-            </a>
-            <h2 id="portfolio-project-title">Turnbull School</h2>
-            <p>A modern, warm and inviting website created for Turnbull – a private elementary school in Ottawa.</p>
-            <a className="portfolio-project__button" href={`https://${featuredProject.site}`} target="_blank" rel="noreferrer">
-              Visit Site <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
+        
+        
       </div>
     </main>
   )

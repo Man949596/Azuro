@@ -12,9 +12,7 @@ function Proposal({ onBack }) {
   return (
     <main className="proposal-page">
       <section className="proposal-content" aria-labelledby="proposal-title">
-        <button className="proposal-back" type="button" onClick={onBack}>
-          <span aria-hidden="true">←</span> Back to Home
-        </button>
+      
         <p className="proposal-eyebrow">Get a Proposal</p>
         <h1 id="proposal-title">Start the Conversation</h1>
         <p className="proposal-intro">
