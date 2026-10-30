@@ -139,13 +139,29 @@ function SeoCaseStudies({ onGetProposal, onViewPortfolio }) {
           </div>
         </div>
 
-        <div className="seo-platforms" aria-label="Search and AI platforms">
-          {searchPlatforms.map((platform) => (
-            <div className={`seo-platform seo-platform--${platform.className}`} key={platform.name}>
-              <img src={platform.image} alt="" loading="eager" decoding="async" />
-              <span>{platform.name}</span>
-            </div>
-          ))}
+        <div className="seo-platforms" role="group" aria-label="Search and AI platforms">
+          <div className="seo-platforms__track">
+            {[false, true].map((isDuplicate) => (
+              <div
+                className="seo-platforms__group"
+                role="list"
+                aria-label={isDuplicate ? undefined : 'Search and AI platforms'}
+                aria-hidden={isDuplicate}
+                key={String(isDuplicate)}
+              >
+                {searchPlatforms.map((platform) => (
+                  <div
+                    className={`seo-platform seo-platform--${platform.className}`}
+                    role="listitem"
+                    key={platform.name}
+                  >
+                    <img src={platform.image} alt="" loading="eager" decoding="async" />
+                    <span>{platform.name}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -235,7 +251,7 @@ function SeoCaseStudies({ onGetProposal, onViewPortfolio }) {
           loading="lazy"
           decoding="async"
         />
-        <blockquote className="seo-testimonial__quote">
+           <blockquote className="seo-testimonial__quote">
           “{seoCaseStudy.quote}”
         </blockquote>
         <figure className="seo-testimonial__author">
@@ -752,7 +768,7 @@ function SeoCaseStudies({ onGetProposal, onViewPortfolio }) {
                   <span className="seo-result__chatgpt-icon" aria-hidden="true">
                     <img src="https://azurodigital.com/wp-content/uploads/gemini-color.png.webp" alt="" />
                   </span>
-                  <p><strong>Gamini </strong><q>best orthotic manufacturers in calgary</q></p>
+                  <p><strong>Gamini </strong><q>best orthotic manufacturers in calgary const</q></p>
                   <span className="seo-result__rank">#1</span>
                 </div>
                 <img

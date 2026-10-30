@@ -55,55 +55,55 @@ const menus = [
     label: 'Company',
     variant: 'company',
     links: [
-      { label: 'About Us', href: 'https://azurodigital.com/about/', description: 'Learn more about Azuro Digital.' },
+      { label: 'About Us', href: '', description: 'Learn more about Azuro Digital.' },
       { label: 'Careers', href: '/careers', description: 'Explore job opportunities.' },
-      { label: 'Insights', href: 'https://azurodigital.com/blog/', description: 'Check out our blog.' },
+      { label: 'Insights', href: '', description: 'Check out our blog.' },
     ],
   },
   {
     label: 'Services',
     variant: 'services',
     links: [
-      { label: 'Custom Website Design', href: 'https://azurodigital.com/custom-web-design/' },
-      { label: 'WordPress Development', href: 'https://azurodigital.com/wordpress-development/' },
-      { label: 'Logo Design & Branding', href: 'https://azurodigital.com/logo-design-and-branding/' },
-      { label: 'Copywriting & Content Creation', href: 'https://azurodigital.com/copy/' },
-      { label: 'Accessibility Compliance', href: 'https://azurodigital.com/accessible-web-design/' },
-      { label: 'Loading Speed Optimization', href: 'https://azurodigital.com/speed-optimization/' },
-      { label: 'SEO & GEO / AI Search', href: 'https://azurodigital.com/seo-agency-canada/' },
-      { label: 'Custom Web Development', href: 'https://azurodigital.com/custom-web-development-canada/' },
-      { label: 'Conversion Rate Optimization', href: 'https://azurodigital.com/conversion-rate-optimization/' },
-      { label: 'Graphic Design & Animation', href: 'https://azurodigital.com/graphic-design-and-animation/' },
-      { label: 'Security & Privacy Compliance', href: 'https://azurodigital.com/security-and-privacy/' },
-      { label: 'Full-Service Digital Marketing', href: 'https://azurodigital.com/digital-marketing-canada/' },
+      { label: 'Custom Website Design', href: '' },
+      { label: 'WordPress Development', href: '' },
+      { label: 'Logo Design & Branding', href: '' },
+      { label: 'Copywriting & Content Creation', href: '' },
+      { label: 'Accessibility Compliance', href: '' },
+      { label: 'Loading Speed Optimization', href: '' },
+      { label: 'SEO & GEO / AI Search', href: '' },
+      { label: 'Custom Web Development', href: '' },
+      { label: 'Conversion Rate Optimization', href: '' },
+      { label: 'Graphic Design & Animation', href: '' },
+      { label: 'Security & Privacy Compliance', href: '' },
+      { label: 'Full-Service Digital Marketing', href: '' },
     ],
   },
   {
     label: 'Industries',
     variant: 'industries',
     links: [
-      { label: 'Manufacturing', href: 'https://azurodigital.com/manufacturing-web-design/' },
-      { label: 'Healthcare', href: 'https://azurodigital.com/healthcare-web-design/' },
-      { label: 'Nonprofit', href: 'https://azurodigital.com/nonprofit-web-design/' },
-      { label: 'Real Estate', href: 'https://azurodigital.com/real-estate-web-design/' },
-      { label: 'Insurance', href: 'https://azurodigital.com/insurance-web-design/' },
-      { label: 'SaaS', href: 'https://azurodigital.com/saas-web-design/' },
-      { label: 'Construction', href: 'https://azurodigital.com/construction-web-design/' },
-      { label: 'Financial', href: 'https://azurodigital.com/financial-services-web-design/' },
-      { label: 'Dental', href: 'https://azurodigital.com/dental-web-design/' },
-      { label: 'Legal', href: 'https://azurodigital.com/law-firm-web-design/' },
-      { label: 'B2B', href: 'https://azurodigital.com/b2b-web-design/' },
-      { label: 'View All', href: 'https://azurodigital.com/industries/' },
+      { label: 'Manufacturing', href: '' },
+      { label: 'Healthcare', href: '' },
+      { label: 'Nonprofit', href: '' },
+      { label: 'Real Estate', href: '' },
+      { label: 'Insurance', href: '' },
+      { label: 'SaaS', href: '' },
+      { label: 'Construction', href: '' },
+      { label: 'Financial', href: '' },
+      { label: 'Dental', href: '' },
+      { label: 'Legal', href: '' },
+      { label: 'B2B', href: '' },
+      { label: 'View All', href: '' },
     ],
   },
   {
     label: 'Tools',
     variant: 'tools',
     links: [
-      { label: 'Technical SEO/GEO Checker', href: 'https://azurodigital.com/technical-seo-geo-checker/', description: 'Enhance your website’s visibility.' },
-      { label: 'Accessible Colour Contrast Checker', href: 'https://azurodigital.com/colour-contrast-checker/', description: 'Check colours for compliant contrast.' },
-      { label: 'Accessibility Statement Generator', href: 'https://azurodigital.com/accessibility-statement-generator/', group: 'generators' },
-      { label: 'Privacy Policy Generator', href: 'https://azurodigital.com/privacy-policy-generator/', group: 'generators' },
+      { label: 'Technical SEO/GEO Checker', href: '', description: 'Enhance your website’s visibility.' },
+      { label: 'Accessible Colour Contrast Checker', href: '', description: 'Check colours for compliant contrast.' },
+      { label: 'Accessibility Statement Generator', href: '', group: 'generators' },
+      { label: 'Privacy Policy Generator', href: '', group: 'generators' },
     ],
   },
   {
@@ -111,9 +111,9 @@ const menus = [
     variant: 'contact',
     links: [
       { label: 'New Project Inquiries', href: 'https://azurodigital.com/proposal/' },
-      { label: 'Job Applications', href: 'https://azurodigital.com/job-application/' },
-      { label: 'Partnerships & Media', href: 'https://azurodigital.com/please-do-not-contact/' },
-      { label: 'Client Support', href: 'https://azurodigital.com/contact-form/' },
+      { label: 'Job Applications', href: '/job-application' },
+      { label: 'Partnerships & Media', href: '/please-do-not-contact' },
+      { label: 'Client Support', href: '/contact-form' },
     ],
   },
 ]
@@ -128,7 +128,7 @@ function MenuIcon({ name }) {
   )
 }
 
-function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCareers }) {
+function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCareers, onViewPartnershipsMedia, onViewJobApplication, onViewClientSupport }) {
   const [openMenu, setOpenMenu] = useState('')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -278,6 +278,18 @@ function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCa
                               if (item.href === '/careers') {
                                 event.preventDefault()
                                 onViewCareers()
+                              }
+                              if (item.href === '/please-do-not-contact') {
+                                event.preventDefault()
+                                onViewPartnershipsMedia()
+                              }
+                              if (item.href === '/job-application') {
+                                event.preventDefault()
+                                onViewJobApplication()
+                              }
+                              if (item.href === '/contact-form') {
+                                event.preventDefault()
+                                onViewClientSupport()
                               }
                               if (item.href === 'https://azurodigital.com/proposal/') {
                                 event.preventDefault()

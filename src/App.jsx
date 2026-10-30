@@ -6,11 +6,17 @@ import Portfolio from './components/Portfolio.jsx'
 import Proposal from './components/Proposal.jsx'
 import SeoCaseStudies from './components/SeoCaseStudies.jsx'
 import Careers from './components/Careers.jsx'
+import PartnershipsMedia from './components/PartnershipsMedia.jsx'
+import JobApplication from './components/JobApplication.jsx'
+import ClientSupport from './components/ClientSupport.jsx'
 
 function getCurrentPage() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/'
   if (path === '/seo-case-studies') return 'seo-case-studies'
   if (path === '/careers') return 'careers'
+  if (path === '/please-do-not-contact') return 'partnerships-media'
+  if (path === '/job-application') return 'job-application'
+  if (path === '/contact-form') return 'client-support'
   return 'home'
 }
 
@@ -60,6 +66,36 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const openPartnershipsMedia = () => {
+    setShowProposal(false)
+    setShowPortfolio(false)
+    setCurrentPage('partnerships-media')
+    if (window.location.pathname !== '/please-do-not-contact') {
+      window.history.pushState({}, '', '/please-do-not-contact')
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const openJobApplication = () => {
+    setShowProposal(false)
+    setShowPortfolio(false)
+    setCurrentPage('job-application')
+    if (window.location.pathname !== '/job-application') {
+      window.history.pushState({}, '', '/job-application')
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const openClientSupport = () => {
+    setShowProposal(false)
+    setShowPortfolio(false)
+    setCurrentPage('client-support')
+    if (window.location.pathname !== '/contact-form') {
+      window.history.pushState({}, '', '/contact-form')
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <>
       <Header
@@ -67,6 +103,9 @@ function App() {
         onViewPortfolio={openPortfolio}
         onViewSeoCaseStudies={openSeoCaseStudies}
         onViewCareers={openCareers}
+        onViewPartnershipsMedia={openPartnershipsMedia}
+        onViewJobApplication={openJobApplication}
+        onViewClientSupport={openClientSupport}
       />
       {showProposal
         ? <Proposal onBack={() => setShowProposal(false)} />
@@ -76,7 +115,13 @@ function App() {
             ? <SeoCaseStudies onGetProposal={openProposal} onViewPortfolio={openPortfolio} />
             : currentPage === 'careers'
               ? <Careers onViewPortfolio={openPortfolio} />
-              : <Home onViewPortfolio={openPortfolio} onViewSeoCaseStudies={openSeoCaseStudies} />}
+              : currentPage === 'partnerships-media'
+                ? <PartnershipsMedia />
+                : currentPage === 'job-application'
+                  ? <JobApplication />
+                  : currentPage === 'client-support'
+                    ? <ClientSupport />
+                    : <Home onViewPortfolio={openPortfolio} onViewSeoCaseStudies={openSeoCaseStudies} />}
       <Footer onViewCareers={openCareers} onGetProposal={openProposal} />
     </>
   )

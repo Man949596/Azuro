@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('https://azurodigital.com/wp-content/uploads/THICCCBOI-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('https://azurodigital.com/wp-content/uploads/THICCCBOI-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('https://azurodigital.com/wp-content/uploads/THICCCBOI-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+.job-application-page {
+  margin-top: 1px;
+  padding: clamp(36px, 5.9vw, 76px) 0 clamp(80px, 8vw, 112px);
+}
+
+.job-application-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .44fr) minmax(0, .56fr);
+  align-items: stretch;
+  gap: clamp(40px, 6.5vw, 68px);
+  width: 100%;
+  max-width: 1440px;
+  min-height: clamp(500px, 55.8vw, 610px);
+  margin: 0 auto;
+  padding-inline: clamp(32px, 4.35vw, 68px);
+}
+
+.job-application-intro {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.job-application-eyebrow {
+  margin: 0 0 18px;
+  color: #086bdc;
+  font-family: 'THICCCBOI', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.job-application-intro h1 {
+  margin: 0;
+  color: #111a3a;
+  font-family: 'THICCCBOI', Arial, sans-serif;
+  font-size: clamp(36px, 3.75vw, 42px);
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1.2;
+}
+
+.job-application-description {
+  max-width: 440px;
+  margin: 18px 0 0;
+  color: #293858;
+  font-family: 'THICCCBOI', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.job-testimonial {
+  width: min(100%, 355px);
+  margin-top: auto;
+  padding: 28px 30px;
+  border-radius: 17px;
+  background: #fff;
+}
+
+.job-testimonial blockquote {
+  margin: 0;
+  color: #17213d;
+  font-family: 'THICCCBOI', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.job-testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.job-testimonial__author img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.job-testimonial__author p,
+.job-testimonial__author span {
+  display: block;
+  margin: 0;
+  font-family: 'THICCCBOI', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.job-testimonial__author p {
+  color: #17213d;
+  font-weight: 500;
+}
+
+.job-testimonial__author span {
+  margin-top: 2px;
+  color: #53617f;
+}
+
+.job-testimonial__dots {
+  display: flex;
+  align-self: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.job-testimonial__dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #dfe4ef;
+  cursor: pointer;
+}
+
+.job-testimonial__dots button.is-active {
+  background: #1473e6;
+}
+
+.job-testimonial__controls {
+  display: flex;
+  align-self: flex-end;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding-right: 1px;
+}
+
+.job-testimonial__controls button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #e0e5f1;
+  border-radius: 55%;
+  color: #0874f9;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 18px;
+  line-height: 1;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+
+.job-testimonial__controls button:hover {
+  border-color: #c4d2ec;
+  background: #fff;
+}
+
+.job-application-notice {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid #e9edf6;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(22 37 69 / 9%);
+}
+
+.job-application-notice::before {
+  position: absolute;
+  inset: 12px;
+  border-radius: 4px;
+  background: #f5f7ff;
+  content: '';
+}
+
+.job-application-notice p {
+  position: relative;
+  max-width: 440px;
+  margin: 0;
+  padding: 30px;
+  color: #111a3a;
+  font-family: 'THICCCBOI', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.job-application-notice a {
+  color: #0874f9;
+  font-weight: 500;
+}
+
+.job-application-notice a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1050px) {
+  .job-application-layout {
+    grid-template-columns: minmax(0, .42fr) minmax(0, .58fr);
+    gap: clamp(44px, 6.5vw, 68px);
+    padding-inline: clamp(32px, 4.35vw, 44px);
+  }
+
+  .job-application-intro h1 {
+    font-size: clamp(32px, 4vw, 40px);
+  }
+
+  .job-application-notice p {
+    padding: 24px;
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .job-application-page {
+    padding-block: 34px 72px;
+  }
+
+  .job-application-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    min-height: 0;
+    padding-inline: 24px;
+  }
+
+  .job-application-intro h1 {
+    font-size: clamp(34px, 9vw, 42px);
+  }
+
+  .job-application-description {
+    font-size: 14px;
+  }
+
+  .job-testimonial {
+    margin-top: 36px;
+  }
+
+  .job-application-notice {
+    min-height: 360px;
+  }
+
+  .job-application-notice p {
+    padding: 22px;
+    font-size: 15px;
+  }
+}

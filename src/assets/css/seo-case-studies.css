@@ -138,13 +138,31 @@
 }
 
 .seo-platforms {
-  display: flex;
+  overflow: hidden;
   width: min(100%, 1500px);
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(20px, 4vw, 76px);
   margin: 58px auto 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
   animation: seo-platforms-enter 800ms 250ms both;
+}
+
+.seo-platforms__track {
+  display: flex;
+  width: max-content;
+  animation: seo-platforms-scroll 28s linear infinite;
+}
+
+.seo-platforms:hover .seo-platforms__track,
+.seo-platforms:focus-within .seo-platforms__track {
+  animation-play-state: paused;
+}
+
+.seo-platforms__group {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1px;
 }
 
 .seo-platform {
@@ -852,6 +870,12 @@
   }
 }
 
+@keyframes seo-platforms-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes seo-resource-image-enter {
   from {
     opacity: .35;
@@ -936,10 +960,12 @@
   }
 
   .seo-platforms {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px 30px;
     margin-top: 54px;
+  }
+
+  .seo-platforms__group {
+    flex-basis: 680px;
+    gap: 20px;
   }
 
   .seo-platform {
@@ -1237,6 +1263,22 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .seo-platforms__track {
+    width: 100%;
+    animation: none;
+  }
+
+  .seo-platforms__group {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 30px;
+  }
+
+  .seo-platforms__group[aria-hidden="true"] {
+    display: none;
+  }
+
   .seo-practice__image {
     opacity: 1;
     transform: none;
