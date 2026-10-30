@@ -290,7 +290,7 @@ function SeoCaseStudies({ onGetProposal, onViewPortfolio }) {
                     alt=""
                   />
                   <p><strong>Google</strong><span>·</span><q>wisdom teeth removal staten island</q></p>
-                  <span className="seo-result__rank">#1 + #3 + #4</span>
+                  <span className="seo-result__rank">#1</span>
                 </div>
                 <img
                   className="seo-result__image"
@@ -367,7 +367,7 @@ function SeoCaseStudies({ onGetProposal, onViewPortfolio }) {
                     alt=""
                   />
                   <p><strong>Google</strong><span>·</span><q>wisdom teeth removal staten island</q></p>
-                  <span className="seo-result__rank">#1 + #3 + #4</span>
+                  <span className="seo-result__rank">#1</span>
                 </div>
                 <img
                   className="seo-result__image"
@@ -598,7 +598,7 @@ function SeoCaseStudies({ onGetProposal, onViewPortfolio }) {
                     alt=""
                   />
                   <p><strong>Google</strong><span>·</span><q>wisdom teeth removal staten island</q></p>
-                  <span className="seo-result__rank">#1 + #3 + #4</span>
+                  <span className="seo-result__rank">#1</span>
                 </div>
                 <img
                   className="seo-result__image"
