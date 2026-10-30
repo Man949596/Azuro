@@ -50,11 +50,18 @@ function Icon({ name }) {
   return <svg className={`footer-icon footer-icon--${name}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>
 }
 
-function FooterLinkList({ links, className = '' }) {
+function FooterLinkList({ links, className = '', onViewCareers }) {
   return (
     <div className={`footer-link-list ${className}`}>
       {links.map((link) => (
-        <a href={link === 'Contact' ? '#contact' : '#services'} key={link}>
+        <a
+          href={link === 'Contact' ? '#contact' : link === 'Careers' ? '/careers' : '#services'}
+          key={link}
+          onClick={link === 'Careers' ? (event) => {
+            event.preventDefault()
+            onViewCareers()
+          } : undefined}
+        >
           <Icon name="arrow" />
           <span>{link}</span>
         </a>
@@ -63,7 +70,7 @@ function FooterLinkList({ links, className = '' }) {
   )
 }
 
-function Footer() {
+function Footer({ onViewCareers }) {
   return (
     <footer className="site-footer">
       <div className="footer-card">
@@ -95,7 +102,7 @@ function Footer() {
             <div className="footer-brand__links">
               <div className="footer-mini-column">
                 <h3>Company</h3>
-                <FooterLinkList links={companyLinks} />
+                <FooterLinkList links={companyLinks} onViewCareers={onViewCareers} />
               </div>
               <div className="footer-mini-column">
                 <h3>Tools</h3>

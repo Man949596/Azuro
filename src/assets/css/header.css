@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #fff;
+  background: transparent;
   border-bottom: 1px solid transparent;
   transition: background-color 350ms ease, border-color 350ms ease, box-shadow 350ms ease;
 }

@@ -56,7 +56,7 @@ const menus = [
     variant: 'company',
     links: [
       { label: 'About Us', href: 'https://azurodigital.com/about/', description: 'Learn more about Azuro Digital.' },
-      { label: 'Careers', href: 'https://azurodigital.com/careers/', description: 'Explore job opportunities.' },
+      { label: 'Careers', href: '/careers', description: 'Explore job opportunities.' },
       { label: 'Insights', href: 'https://azurodigital.com/blog/', description: 'Check out our blog.' },
     ],
   },
@@ -128,7 +128,7 @@ function MenuIcon({ name }) {
   )
 }
 
-function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies }) {
+function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCareers }) {
   const [openMenu, setOpenMenu] = useState('')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -147,9 +147,7 @@ function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies }) {
 
   useEffect(() => {
     const updateScrollState = () => {
-      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight
-      const hasScrolledPastThreshold = scrollableHeight > 0
-        && window.scrollY / scrollableHeight >= 0.2
+      const hasScrolledPastThreshold = window.scrollY > 0
 
       setIsScrolled((currentState) => (
         currentState === hasScrolledPastThreshold ? currentState : hasScrolledPastThreshold
@@ -276,6 +274,10 @@ function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies }) {
                               if (item.href === '/seo-case-studies') {
                                 event.preventDefault()
                                 onViewSeoCaseStudies()
+                              }
+                              if (item.href === '/careers') {
+                                event.preventDefault()
+                                onViewCareers()
                               }
                               if (item.href === 'https://azurodigital.com/proposal/') {
                                 event.preventDefault()
