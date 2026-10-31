@@ -82,17 +82,17 @@ const menus = [
     label: 'Industries',
     variant: 'industries',
     links: [
-      { label: 'Manufacturing', href: '' },
-      { label: 'Healthcare', href: '' },
-      { label: 'Nonprofit', href: '' },
-      { label: 'Real Estate', href: '' },
-      { label: 'Insurance', href: '' },
-      { label: 'SaaS', href: '' },
-      { label: 'Construction', href: '' },
-      { label: 'Financial', href: '' },
-      { label: 'Dental', href: '' },
-      { label: 'Legal', href: '' },
-      { label: 'B2B', href: '' },
+      { label: 'Manufacturing', href: '/manufacturing-web-design' },
+      { label: 'Healthcare', href: '/healthcare-web-design' },
+      { label: 'Nonprofit', href: '/nonprofit-web-design' },
+      { label: 'Real Estate', href: '/real-estate-web-design' },
+      { label: 'Insurance', href: '/insurance-web-design' },
+      { label: 'SaaS', href: '/saas-web-design' },
+      { label: 'Construction', href: '/construction-web-design' },
+      { label: 'Financial', href: '/financial-web-design' },
+      { label: 'Dental', href: '/dental-web-design' },
+      { label: 'Legal', href: '/law-firm-web-design' },
+      { label: 'B2B', href: '/b2b-web-design' },
       { label: 'View All', href: '' },
     ],
   },
@@ -100,10 +100,10 @@ const menus = [
     label: 'Tools',
     variant: 'tools',
     links: [
-      { label: 'Technical SEO/GEO Checker', href: '', description: 'Enhance your website’s visibility.' },
-      { label: 'Accessible Colour Contrast Checker', href: '', description: 'Check colours for compliant contrast.' },
-      { label: 'Accessibility Statement Generator', href: '', group: 'generators' },
-      { label: 'Privacy Policy Generator', href: '', group: 'generators' },
+      { label: 'Technical SEO/GEO Checker', href: '/technical-seo-geo-checker', description: 'Enhance your website’s visibility.'  },
+      { label: 'Accessible Colour Contrast Checker', href: '/accessible-colour-contrast-checker', description: 'Check colours for compliant contrast.' },
+      { label: 'Accessibility Statement Generator', href: '/accessibility-statement-generator', group: 'generators' },
+      { label: 'Privacy Policy Generator', href: '/privacy-policy-generator', group: 'generators' },
     ],
   },
   {
@@ -128,7 +128,7 @@ function MenuIcon({ name }) {
   )
 }
 
-function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCareers, onViewPartnershipsMedia, onViewJobApplication, onViewClientSupport }) {
+function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewTechnicalSeoGeoChecker, onViewAccessibleColourContrastChecker, onViewAccessibilityStatementGenerator, onViewPrivacyPolicyGenerator, onViewManufacturing, onViewConstruction, onViewHealthcare, onViewFinancial, onViewNonprofit, onViewDental, onViewRealEstate, onViewLegal, onViewInsurance, onViewB2B, onViewSaaS, onViewCareers, onViewPartnershipsMedia, onViewJobApplication, onViewClientSupport }) {
   const [openMenu, setOpenMenu] = useState('')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -147,7 +147,7 @@ function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCa
 
   useEffect(() => {
     const updateScrollState = () => {
-      const hasScrolledPastThreshold = window.scrollY > 0
+      const hasScrolledPastThreshold = window.scrollY >0
 
       setIsScrolled((currentState) => (
         currentState === hasScrolledPastThreshold ? currentState : hasScrolledPastThreshold
@@ -260,7 +260,7 @@ function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCa
                       {menu.links.map((item) => (
                         <li 
                           className={`submenu-item${item.group ? ` group-${item.group}` : ''}`}
-                          key={item.href}
+                          key={item.label}
                         >
                           <a
                             className="submenu-link"
@@ -274,6 +274,66 @@ function Header({ onGetProposal, onViewPortfolio, onViewSeoCaseStudies, onViewCa
                               if (item.href === '/seo-case-studies') {
                                 event.preventDefault()
                                 onViewSeoCaseStudies()
+                              }
+                              if (item.href === '/technical-seo-geo-checker') {
+                                event.preventDefault()
+                                onViewTechnicalSeoGeoChecker()
+                              }
+                              if (item.href === '/accessible-colour-contrast-checker') {
+                                event.preventDefault()
+                                onViewAccessibleColourContrastChecker()
+                              }
+                              if (item.href === '/accessibility-statement-generator') {
+                                event.preventDefault()
+                                onViewAccessibilityStatementGenerator()
+                              }
+                              if (item.href === '/privacy-policy-generator') {
+                                event.preventDefault()
+                                onViewPrivacyPolicyGenerator()
+                              }
+                              if (item.href === '/manufacturing-web-design') {
+                                event.preventDefault()
+                                onViewManufacturing()
+                              }
+                              if (item.href === '/construction-web-design') {
+                                event.preventDefault()
+                                onViewConstruction()
+                              }
+                              if (item.href === '/healthcare-web-design') {
+                                event.preventDefault()
+                                onViewHealthcare()
+                              }
+                              if (item.href === '/financial-web-design') {
+                                event.preventDefault()
+                                onViewFinancial()
+                              }
+                              if (item.href === '/nonprofit-web-design') {
+                                event.preventDefault()
+                                onViewNonprofit()
+                              }
+                              if (item.href === '/dental-web-design') {
+                                event.preventDefault()
+                                onViewDental()
+                              }
+                              if (item.href === '/real-estate-web-design') {
+                                event.preventDefault()
+                                onViewRealEstate()
+                              }
+                              if (item.href === '/law-firm-web-design') {
+                                event.preventDefault()
+                                onViewLegal()
+                              }
+                              if (item.href === '/insurance-web-design') {
+                                event.preventDefault()
+                                onViewInsurance()
+                              }
+                              if (item.href === '/b2b-web-design') {
+                                event.preventDefault()
+                                onViewB2B()
+                              }
+                              if (item.href === '/saas-web-design') {
+                                event.preventDefault()
+                                onViewSaaS()
                               }
                               if (item.href === '/careers') {
                                 event.preventDefault()

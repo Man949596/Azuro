@@ -34,7 +34,7 @@ const industryLinks = [
 const companyLinks = ['About', 'Blog', 'Careers', 'Contact']
 const toolLinks = [
   'Technical SEO/GEO Checker',
-  'Colour Contrast Checker',
+  'Accessible Colour Contrast Checker',
   'Accessibility Statement Generator',
   'Privacy Policy Generator',
 ]
@@ -50,17 +50,130 @@ function Icon({ name }) {
   return <svg className={`footer-icon footer-icon--${name}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>
 }
 
-function FooterLinkList({ links, className = '', onViewCareers }) {
+function FooterLinkList({ links, className = '', onViewCareers, onViewTechnicalSeoGeoChecker, onViewAccessibleColourContrastChecker, onViewAccessibilityStatementGenerator, onViewPrivacyPolicyGenerator, onViewManufacturing, onViewConstruction, onViewHealthcare, onViewFinancial, onViewNonprofit, onViewDental, onViewRealEstate, onViewLegal, onViewInsurance, onViewB2B, onViewSaaS }) {
   return (
     <div className={`footer-link-list ${className}`}>
       {links.map((link) => (
         <a
-          href={link === 'Contact' ? '#contact' : link === 'Careers' ? '/careers' : '#services'}
+          href={
+            link === 'Contact'
+              ? '#contact'
+              : link === 'Careers'
+                ? '/careers'
+                : link === 'Technical SEO/GEO Checker'
+                  ? '/technical-seo-geo-checker'
+                  : link === 'Accessible Colour Contrast Checker'
+                    ? '/accessible-colour-contrast-checker'
+                    : link === 'Accessibility Statement Generator'
+                      ? '/accessibility-statement-generator'
+                      : link === 'Privacy Policy Generator'
+                        ? '/privacy-policy-generator'
+                        : link === 'Manufacturing Web Design'
+                          ? '/manufacturing-web-design'
+                          : link === 'Construction Web Design'
+                            ? '/construction-web-design'
+                            : link === 'Healthcare Web Design'
+                              ? '/healthcare-web-design'
+                              : link === 'Financial Web Design'
+                                ? '/financial-web-design'
+                                : link === 'Nonprofit Web Design'
+                                  ? '/nonprofit-web-design'
+                                  : link === 'Dental Web Design'
+                                    ? '/dental-web-design'
+                                        : link === 'Real Estate Web Design'
+                                          ? '/real-estate-web-design'
+                                          : link === 'Legal Web Design'
+                                            ? '/law-firm-web-design'
+                                            : link === 'Insurance Web Design'
+                                              ? '/insurance-web-design'
+                                              : link === 'B2B Web Design'
+                                                ? '/b2b-web-design'
+                                                : link === 'SaaS Web Design'
+                                                  ? '/saas-web-design'
+                            : '#services'
+          }
           key={link}
-          onClick={link === 'Careers' ? (event) => {
-            event.preventDefault()
-            onViewCareers()
-          } : undefined}
+          onClick={link === 'Careers'
+            ? (event) => {
+              event.preventDefault()
+              onViewCareers()
+            }
+            : link === 'Technical SEO/GEO Checker'
+              ? (event) => {
+                event.preventDefault()
+                onViewTechnicalSeoGeoChecker()
+              }
+              : link === 'Accessible Colour Contrast Checker'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewAccessibleColourContrastChecker()
+                }
+              : link === 'Accessibility Statement Generator'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewAccessibilityStatementGenerator()
+                }
+              : link === 'Privacy Policy Generator'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewPrivacyPolicyGenerator()
+                }
+              : link === 'Manufacturing Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewManufacturing()
+                }
+              : link === 'Construction Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewConstruction()
+                }
+              : link === 'Healthcare Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewHealthcare()
+                }
+              : link === 'Financial Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewFinancial()
+                }
+              : link === 'Nonprofit Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewNonprofit()
+                }
+              : link === 'Dental Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewDental()
+                }
+              : link === 'Real Estate Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewRealEstate()
+                }
+              : link === 'Legal Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewLegal()
+                }
+              : link === 'Insurance Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewInsurance()
+                }
+              : link === 'B2B Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewB2B()
+                }
+              : link === 'SaaS Web Design'
+                ? (event) => {
+                  event.preventDefault()
+                  onViewSaaS()
+                }
+              : undefined}
         >
           <Icon name="arrow" />
           <span>{link}</span>
@@ -70,7 +183,7 @@ function FooterLinkList({ links, className = '', onViewCareers }) {
   )
 }
 
-function Footer({ onViewCareers }) {
+function Footer({ onViewCareers, onViewTechnicalSeoGeoChecker, onViewAccessibleColourContrastChecker, onViewAccessibilityStatementGenerator, onViewPrivacyPolicyGenerator, onViewManufacturing, onViewConstruction, onViewHealthcare, onViewFinancial, onViewNonprofit, onViewDental, onViewRealEstate, onViewLegal, onViewInsurance, onViewB2B, onViewSaaS }) {
   return (
     <footer className="site-footer">
       <div className="footer-card">
@@ -102,11 +215,26 @@ function Footer({ onViewCareers }) {
             <div className="footer-brand__links">
               <div className="footer-mini-column">
                 <h3>Company</h3>
-                <FooterLinkList links={companyLinks} onViewCareers={onViewCareers} />
+                <FooterLinkList
+                  links={companyLinks}
+                  onViewCareers={onViewCareers}
+                  onViewTechnicalSeoGeoChecker={onViewTechnicalSeoGeoChecker}
+                  onViewAccessibleColourContrastChecker={onViewAccessibleColourContrastChecker}
+                  onViewAccessibilityStatementGenerator={onViewAccessibilityStatementGenerator}
+                  onViewPrivacyPolicyGenerator={onViewPrivacyPolicyGenerator}
+                  onViewManufacturing={onViewManufacturing}
+                />
               </div>
               <div className="footer-mini-column">
                 <h3>Tools</h3>
-                <FooterLinkList links={toolLinks} />
+                <FooterLinkList
+                  links={toolLinks}
+                  onViewCareers={onViewCareers}
+                  onViewTechnicalSeoGeoChecker={onViewTechnicalSeoGeoChecker}
+                  onViewAccessibleColourContrastChecker={onViewAccessibleColourContrastChecker}
+                  onViewAccessibilityStatementGenerator={onViewAccessibilityStatementGenerator}
+                  onViewPrivacyPolicyGenerator={onViewPrivacyPolicyGenerator}
+                />
               </div>
             </div>
 
@@ -130,7 +258,7 @@ function Footer({ onViewCareers }) {
 
           <div className="footer-column">
             <h3>Industries</h3>
-            <FooterLinkList links={industryLinks} />
+            <FooterLinkList links={industryLinks} onViewManufacturing={onViewManufacturing} onViewConstruction={onViewConstruction} onViewHealthcare={onViewHealthcare} onViewFinancial={onViewFinancial} onViewNonprofit={onViewNonprofit} onViewDental={onViewDental} onViewRealEstate={onViewRealEstate} onViewLegal={onViewLegal} onViewInsurance={onViewInsurance} onViewB2B={onViewB2B} onViewSaaS={onViewSaaS} />
           </div>
         </div>
 

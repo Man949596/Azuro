@@ -1,0 +1,357 @@
+.statement-checker {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.statement-hero {
+  min-height: 250px;
+  padding: 18px 24px 24px;
+}
+
+.statement-hero .checker-eyebrow {
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.statement-hero h1 {
+  font-size: clamp(29px, 3.2vw, 42px);
+  line-height: 1.18;
+}
+
+.statement-hero__intro {
+  margin: 16px 0 0 !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+.statement-builder {
+  width: min(100% - 44px, 1120px);
+  margin: 0 auto;
+  color: #17213d;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.statement-form {
+  display: grid;
+  gap: 20px;
+}
+
+.statement-form-card,
+.statement-actions,
+.statement-preview-card {
+  padding: 22px 26px;
+  border: 1px solid #e8ecf7;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgb(25 35 63 / 7%);
+}
+
+.statement-form-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px 18px;
+}
+
+.statement-form-card > h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 3px;
+  color: #17213d;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.statement-field,
+.statement-choice {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #273552;
+  font: inherit;
+  font-size: 12px;
+}
+
+.statement-field {
+  display: grid;
+  gap: 5px;
+}
+
+.statement-field > span:first-child,
+.statement-choice legend {
+  color: #17213d;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.statement-field input,
+.statement-field select,
+.statement-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 36px;
+  padding: 8px 11px;
+  border: 1px solid #dfe5f0;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #273552;
+  font: inherit;
+  font-size: 12px;
+}
+
+.statement-field input:focus,
+.statement-field select:focus,
+.statement-field textarea:focus {
+  border-color: #1769e8;
+  box-shadow: 0 0 0 3px rgb(23 105 232 / 10%);
+}
+
+.statement-field input::placeholder,
+.statement-field textarea::placeholder {
+  color: #9aa4b6;
+}
+
+.statement-field--textarea textarea {
+  min-height: 75px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.statement-choice {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+}
+
+.statement-choice legend {
+  margin-bottom: 9px;
+}
+
+.statement-choice__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 16px;
+}
+
+.statement-choice__options label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #34415d;
+  font-size: 11px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.statement-choice__options input {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin: 0;
+  accent-color: #0875e1;
+}
+
+.statement-standards > .statement-choice,
+.statement-standards > .statement-field,
+.statement-contrast > .statement-choice,
+.statement-contrast > .statement-field,
+.statement-features > .statement-choice,
+.statement-features > .statement-field,
+.statement-testing > .statement-choice,
+.statement-limitations > .statement-choice,
+.statement-limitations > .statement-field {
+  min-height: 58px;
+}
+
+.statement-features,
+.statement-testing,
+.statement-limitations {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.statement-field--widget {
+  grid-column: 2;
+}
+
+.statement-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 70px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.statement-actions button {
+  min-height: 40px;
+  padding: 0 19px;
+  border: 0;
+  border-radius: 999px;
+  background: #0875e1;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  transition: background-color .18s ease, transform .18s ease;
+}
+
+.statement-actions button:hover {
+  transform: translateY(-1px);
+  background: #075fb9;
+}
+
+.statement-actions .statement-actions__reset {
+  background: #eef3fb;
+  color: #17213d;
+}
+
+.statement-actions .statement-actions__reset:hover {
+  background: #dfe8f7;
+}
+
+.statement-actions [role='status'] {
+  color: #43506c;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.statement-preview-card {
+  margin-top: 20px;
+  padding: 23px 26px;
+}
+
+.statement-preview-card > h2 {
+  margin: 0 0 12px;
+  color: #17213d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.statement-preview {
+  color: #253350;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.statement-preview h3 {
+  margin: 0 0 5px;
+  color: #17213d;
+  font-size: 16px;
+}
+
+.statement-preview h4 {
+  margin: 14px 0 4px;
+  color: #17213d;
+  font-size: 13px;
+}
+
+.statement-preview p {
+  margin: 0 0 8px;
+}
+
+.statement-preview ul {
+  margin: 4px 0 9px;
+  padding-left: 20px;
+}
+
+.statement-actions--bottom {
+  margin-top: 20px;
+}
+
+.statement-disclaimer {
+  width: min(100% - 26px, 980px);
+  margin: 26px auto 55px;
+  color: #4a5670;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.statement-content .checker-copy-group strong {
+  color: #0875e1;
+}
+
+.statement-content .checker-copy-group h3 {
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .statement-hero {
+    min-height: 225px;
+    padding: 20px 20px 18px;
+  }
+
+  .statement-hero .checker-eyebrow {
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+
+  .statement-hero h1 {
+    font-size: clamp(25px, 6.6vw, 34px);
+  }
+
+  .statement-hero__intro {
+    margin-top: 13px !important;
+    font-size: 12px !important;
+  }
+
+  .statement-builder {
+    width: calc(100% - 32px);
+  }
+
+  .statement-form {
+    gap: 14px;
+  }
+
+  .statement-form-card,
+  .statement-actions,
+  .statement-preview-card {
+    padding: 17px;
+    border-radius: 15px;
+  }
+
+  .statement-form-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .statement-form-card > h2 {
+    font-size: 15px;
+  }
+
+  .statement-field--widget {
+    grid-column: auto;
+  }
+
+  .statement-standards > .statement-choice,
+  .statement-standards > .statement-field,
+  .statement-contrast > .statement-choice,
+  .statement-contrast > .statement-field,
+  .statement-features > .statement-choice,
+  .statement-features > .statement-field,
+  .statement-testing > .statement-choice,
+  .statement-limitations > .statement-choice,
+  .statement-limitations > .statement-field {
+    min-height: auto;
+  }
+
+  .statement-actions {
+    flex-wrap: wrap;
+    min-height: 62px;
+  }
+
+  .statement-actions button {
+    min-height: 38px;
+    font-size: 12px;
+  }
+
+  .statement-preview {
+    font-size: 12px;
+  }
+
+  .statement-disclaimer {
+    width: calc(100% - 16px);
+    margin: 22px auto 40px;
+  }
+}
